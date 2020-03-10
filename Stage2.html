@@ -1,0 +1,131 @@
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+                        function startTime()
+                        {
+                            var tm=new Date();
+                            var h=tm.getHours();
+                            var m=tm.getMinutes();
+                            var s=tm.getSeconds();
+                            m=checkTime(m);
+                            s=checkTime(s);
+                            document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+                            t=setTimeout('startTime()',500);
+                        }
+                        function checkTime(i)
+                        {  
+                            if (i<10)
+                            {
+                                i="0" + i;
+                            }
+                            return i;
+                        }
+                    </script>
+    <title>Кубик Рубика</title>
+  </head>
+  <body  onload="startTime()">
+        <div class="container">
+           <a class="gotop" href="#"><img src="img/top.png" alt=""></a>
+            <div class="header">
+                
+                <ul class="list">
+                   <li class="allname">MoEsh</li>
+                   <li class="main point"><a href="index.html" class="point">Главная</a></li>
+                   <li><a href='Prep.html' class="point">Подготовка</a></li>
+                   
+                    <li>
+                       <ul class="drop">
+                           <li><a href="Stage1.html#sec1" class="dropli">Правильный крест</a></li>
+                           <li><a href="Stage1.html#sec2" class="dropli">Ставим углы</a></li>
+                       </ul>
+                   
+                   <a href="Stage1.html" class="point">Этап №1</a></li>
+                   <li>
+                   <ul class="drop">
+                       <li><a href="Stage2.html#sec1" class="dropli">Средний слой</a></li>
+                       </ul>
+                   <a href="#" class="point active">Этап №2</a></li>
+                   
+                   <li>
+                   <ul class="drop">
+                       <li><a href="Stage3.html#sec1" class="dropli">Новый крест</a></li>
+                       <li><a href="Stage3.html#sec2" class="dropli">Делаем правильным</a></li>
+                       <li><a href="Stage3.html#sec3" class="dropli">Ставим углы</a></li>
+                       <li><a href="Stage3.html#sec4" class="dropli">Разворачиваем углы</a></li>
+                       </ul>
+                   <a href="Stage3.html" class="point">Этап №3</a></li>
+                   <li><a href="Table.html" class="linkbox"><img src="img/icon.png" alt="" class="icon"></a></li>
+                   
+                   
+                </ul>
+            </div>
+            
+            <div class="sectionName">
+                <div class="name">Этап №2</div>
+                <div class="idea">Какой бы ни была ваша цель, вы сможете ее достигнуть, если только захотите потрудиться.</div>
+                <div class="author">Опра Уинфри</div>
+            </div>
+            <div class="content">
+               <a name="sec1"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 3: сборка среднего слоя кубика Рубика.</div>
+                    <img src="img/2itg.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Перевернем кубик. Теперь собранная желтая грань внизу, а вверху - белый центр. Так будем держать до конца сборки.</div>
+                    <img src="img/2s1.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Найдите ребро без белого цвета, к примеру, зелено-оранжевое. Покрутите грань, пока одна из наклеек не встанет к своему центру (зеленый к зеленому).</div>
+                    <img src="img/2s2.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Если зеленая грань не совмещается с зеленым центром, совместите оранжевый цвет. Т.е. у нас 2 варианта.</div>
+                    <img src="img/2s3.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">U' L' U L 
+U F U' F' 
+Выполните эти формулы (ребро переместится вниз и влево). </div>
+                    <img src="img/2s4.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">U R U' R' 
+U' F' U F 
+Ребро прыгает вниз и вправо - на свое место. 
+Оранжевым держим к себе</div>
+                    <img src="img/2s5.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Типичная ситуация - искомое ребро уже стоит на своем месте, но неправильно повернуто. Тогда делаем одну из двух предыдущих формул - и "выбиваем" ребро со своего места.</div>
+                    <img src="img/2s6.jpg" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Наше ребро выскочит наверх и вы уже сможете все сделать так, чтобы поставить его на свое место правильно.</div>
+                    <img src="img/2s7.jpg" alt="">
+                </div>
+                <div class="box">
+                <a class="button" href="Stage3.html">Далее</a>
+                </div>
+            </div>
+            <div class="footer">
+                <a class="changeL" href="indexEng.html">
+                   <div class="act1"></div>
+                    РУ
+                    
+                </a>
+                <a href="https://kak-sobrat-kubik-rubika-3x3.ru" class="outlink" target="_blank">Подробное объяснение</a>
+                <a href="https://ru.wikipedia.org/wiki/Кубик_Рубика" class="wiki" target="_blank"><div><img src="img/wiki.png" alt=""></div></a>
+                <div class="currentime">
+                    <p id="txt"> </p>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+       
+  </body>
+</html>

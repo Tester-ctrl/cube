@@ -1,0 +1,86 @@
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+                        function startTime()
+                        {
+                            var tm=new Date();
+                            var h=tm.getHours();
+                            var m=tm.getMinutes();
+                            var s=tm.getSeconds();
+                            m=checkTime(m);
+                            s=checkTime(s);
+                            document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+                            t=setTimeout('startTime()',500);
+                        }
+                        function checkTime(i)
+                        {  
+                            if (i<10)
+                            {
+                                i="0" + i;
+                            }
+                            return i;
+                        }
+                    </script>
+    <title>Кубик Рубика</title>
+  </head>
+  <body  onload="startTime()">
+        <div class="container">
+           <a class="gotop" href="#"><img src="img/top.png" alt=""></a>
+            <div class="header">
+                
+                <ul class="list">
+                   <li class="allname">MoEsh</li>
+                   <li class="main point"><a href="index.html" class="point">Home</a></li>
+                   <li><a href="Prep.html" class="point">Preparation</a></li>
+                   
+                    <li>
+                       <ul class="drop">
+                           <li><a href="Stage1.html#sec1" class="dropli">Correct cross</a></li>
+                           <li><a href="Stage1.html#sec2" class="dropli">Correct corners</a></li>
+                       </ul>
+                   
+                   <a href="Stage1.html" class="point">Stage №1</a></li>
+                   <li>
+                   <ul class="drop">
+                       <li><a href="Stage2.html#sec1" class="dropli">Mid</a></li>
+                       </ul>
+                   <a href="Stage2.html" class="point">Stage №2</a></li>
+                   
+                   <li>
+                   <ul class="drop">
+                       <li><a href="Stage3.html#sec1" class="dropli">New cross</a></li>
+                       <li><a href="Stage3.html#sec2" class="dropli">Do correct</a></li>
+                       <li><a href="Stage3.html#sec3" class="dropli">Correct top corners </a></li>
+                       <li><a href="Stage3.html#sec4" class="dropli">Turn the corners</a></li>
+                       </ul>
+                   <a href="Stage3.html" class="point">Stage №3</a></li>
+                    
+                    <li><a href="#" class="linkbox"><img src="img/icon.png" alt="" class="icon"></a></li> 
+                </ul>
+            </div>
+      
+            <div class="sectionName">
+                <div class="name">Coming soon</div>
+            </div>
+            
+            <div class="content">
+                 
+            </div>
+            <div class="footer">
+                <a class="changeL" href="index.html">
+                   <div class="act2"></div>
+                    ene  EN
+                    
+                </a>
+                <a href="https://kak-sobrat-kubik-rubika-3x3.ru" class="outlink" target="_blank">Detailed explanation</a>
+                <a href="https://ru.wikipedia.org/wiki/Кубик_Рубика" class="wiki" target="_blank"><div><img src="img/wiki.png" alt=""></div></a>
+                <div class="currentime">
+                    <p id="txt"> </p>
+                </div>
+            </div>
+         
+      </div>         
+  </body>
+</html>

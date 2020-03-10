@@ -1,0 +1,201 @@
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+                        function startTime()
+                        {
+                            var tm=new Date();
+                            var h=tm.getHours();
+                            var m=tm.getMinutes();
+                            var s=tm.getSeconds();
+                            m=checkTime(m);
+                            s=checkTime(s);
+                            document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+                            t=setTimeout('startTime()',500);
+                        }
+                        function checkTime(i)
+                        {  
+                            if (i<10)
+                            {
+                                i="0" + i;
+                            }
+                            return i;
+                        }
+        var sig=0;
+    var first=0;
+    var second=0;
+function addnum(num) {
+    var idColor = document.getElementById('idColor').value;
+    idColor = idColor + num;
+    document.getElementById('idColor').value = idColor;
+}
+function sign(num){
+    sig = num;
+    first = document.getElementById('idColor').value;
+    if(first===''){
+        first=0;
+    }
+    document.getElementById('idColor').value = '';
+    document.getElementById('idColor2').value = first;
+}
+    function equl(){
+    second = document.getElementById('idColor').value;
+    if(second===''){
+        second=0;
+    }
+    if(sig===1){first = Number(first) + Number(second); document.getElementById('idColor').value = first;first=0;secon=0;document.getElementById('idColor2').value = '';}
+        if(sig===2){first = Number(first) - Number(second); document.getElementById('idColor').value = first;first=0;secon=0;document.getElementById('idColor2').value = '';}
+        if(sig===3){first = Number(first) * Number(second); document.getElementById('idColor').value = first;first=0;secon=0;document.getElementById('idColor2').value = '';}
+        if(sig===4){first = Number(first) / Number(second); document.getElementById('idColor').value = first;first=0;secon=0;document.getElementById('idColor2').value = '';}
+        if(sig===0){alert('Sign is not entered')}
+}
+    function clep(){
+        document.getElementById('idColor').value = '';
+    }
+                    </script>
+    <title>Кубик Рубика</title>
+  </head>
+  <body  onload="startTime()">
+       <div class="calculator">
+<form>
+   <table>
+      <tr>
+          <td colspan="5"><div class="old"><input class="enter" id="idColor" type="text" value="" readonly></div></td>
+          
+      </tr>
+       <tr>
+           <td><INPUT TYPE="button" VALUE="1" onClick="addnum(1)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="2" onClick="addnum(2)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="3" onClick="addnum(3)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="+" onClick="sign(1)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="-" onClick="sign(2)"></INPUT></td>
+       </tr>
+       <tr>
+           <td><INPUT TYPE="button" VALUE="4" onClick="addnum(4)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="5" onClick="addnum(5)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="6" onClick="addnum(6)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="x" onClick="sign(3)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="/" onClick="sign(4)"></INPUT></td>
+       </tr>
+       <tr>
+           <td><INPUT TYPE="button" VALUE="7" onClick="addnum(7)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="8" onClick="addnum(8)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="9" onClick="addnum(9)"></INPUT></td>
+           <td colspan="2"><div class="big"><INPUT TYPE="button" VALUE="=" onClick="equl()"></INPUT></div></td>
+           <td></td>
+       </tr>
+       <tr>
+           <td><INPUT TYPE="button" VALUE="C" onClick="clep()"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="0" onClick="addnum(0)"></INPUT></td>
+           <td><INPUT TYPE="button" VALUE="." onClick="addnum('.')"></INPUT></td>
+           <td colspan="2"><input class="enter2" id="idColor2" type="text" value="" readonly></td>
+           
+       </tr>
+   </table>
+</form>
+</div>
+        <div class="container">
+           <a class="gotop" href="#"><img src="img/top.png" alt=""></a>
+            <div class="header">
+                
+                <ul class="list">
+                   <li class="allname">MoEsh</li>
+                   <li class="main point"><a href="index.html" class="point">Главная</a></li>
+                   <li><a href="Prep.html" class="point">Подготовка</a></li>
+                   
+                    <li>
+                       <ul class="drop">
+                           <li><a href="Stage1.html#sec1" class="dropli">Правильный крест</a></li>
+                           <li><a href="Stage1.html#sec2" class="dropli">Ставим углы</a></li>
+                       </ul>
+                   
+                   <a href="Stage1.html" class="point">Этап №1</a></li>
+                   <li>
+                   <ul class="drop">
+                       <li><a href="Stage2.html#sec1" class="dropli">Средний слой</a></li>
+                       </ul>
+                   <a href="Stage2.html" class="point">Этап №2</a></li>
+                   
+                   <li>
+                   <ul class="drop">
+                       <li><a href="Stage3.html#sec1" class="dropli">Новый крест</a></li>
+                       <li><a href="Stage3.html#sec2" class="dropli">Делаем правильным</a></li>
+                       <li><a href="Stage3.html#sec3" class="dropli">Ставим углы</a></li>
+                       <li><a href="Stage3.html#sec4" class="dropli">Разворачиваем углы</a></li>
+                       </ul>
+                   <a href="Stage3.html" class="point">Этап №3</a></li>
+                    
+                    <li><a href="Table.html" class="linkbox"><img src="img/icon.png" alt="" class="icon"></a></li> 
+                </ul>
+            </div>
+            
+            <div class="sectionName">
+                <div class="name">Магазин</div>
+            </div>
+            
+            <div class="content forms">
+             
+              <form method='post' name="form1" action=''><table><tr><td>
+ 
+<input name='good' type='checkbox' value='1'> Кубик Рубика <div class="price">500 ₽</div><br>
+<input name='good' type='checkbox' value='2'> Комплект Таймер + Мат <div class="price">1500 ₽</div><br>
+<input name='good' type='checkbox' value='3'> Рюкзак <div class="price">900 ₽</div><br>
+<input name='good' type='checkbox' value='4'> Футболка <div class="price">700 ₽</div><br>
+ 
+</td></tr></table>
+ </form>
+                <a href="#" class="special"  id="countChecked" >Отправить</a>
+              
+           <script type="text/javascript">
+           window.onload = function(){
+    document.getElementById("countChecked").onclick = function() {
+        isCountCheck();
+      };
+  }
+ 
+ 
+function isCountCheck() {
+    var i, len, inputs = document.form1.getElementsByTagName("input");
+    var count = 0;
+    var price = 0;
+    for (i = 0, len = inputs.length; i < len; i++) {
+        if (inputs[i].type === "checkbox" && inputs[i].checked){
+            count+=1;
+            if (inputs[i].value==='1'){
+                price+=500;
+            }
+            if (inputs[i].value==='2'){
+                price+=1500;
+            }
+            if (inputs[i].value==='3'){
+                price+=900;
+            }
+            if (inputs[i].value==='4'){
+                price+=700;
+            }
+        }
+    }
+    alert("Вы выбрали "+count+" товар(а). Общая стоимость: "+price+" рублей.");
+    }
+                </script>
+           <div class="box">
+                <a class="button" href="index.html">Назад</a>
+              </div>
+            
+        </div>
+            <div class="footer">
+                <a class="changeL" href="indexEng.html">
+                   <div class="act1"></div>
+                    РУ
+                    
+                </a>
+                <a href="https://kak-sobrat-kubik-rubika-3x3.ru" class="outlink" target="_blank">Подробное объяснение</a>
+                <a href="https://ru.wikipedia.org/wiki/Кубик_Рубика" class="wiki" target="_blank"><div><img src="img/wiki.png" alt=""></div></a>
+                <div class="currentime">
+                    <p id="txt"> </p>
+                </div>
+            </div>
+        </div>          
+  </body>
+</html>
